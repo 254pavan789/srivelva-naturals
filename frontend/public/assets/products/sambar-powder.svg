@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFF3E0"/>
+      <stop offset="100%" stop-color="#FFCCBC"/>
+    </radialGradient>
+    <radialGradient id="jarGrad" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFF8F5"/>
+      <stop offset="100%" stop-color="#FFCCBC"/>
+    </radialGradient>
+    <radialGradient id="powderGrad" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#EF6C00"/>
+      <stop offset="60%" stop-color="#D84315"/>
+      <stop offset="100%" stop-color="#BF360C"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <circle cx="150" cy="150" r="148" fill="url(#bgGrad)" stroke="#E64A19" stroke-width="2"/>
+
+  <!-- Chilli decorations background -->
+  <g transform="translate(40, 55) rotate(30)">
+    <ellipse cx="0" cy="0" rx="5" ry="16" fill="#C62828" opacity="0.6"/>
+    <ellipse cx="0" cy="-14" rx="3" ry="4" fill="#388E3C" opacity="0.7"/>
+  </g>
+  <g transform="translate(258, 75) rotate(-20)">
+    <ellipse cx="0" cy="0" rx="5" ry="14" fill="#E53935" opacity="0.6"/>
+    <ellipse cx="0" cy="-12" rx="3" ry="4" fill="#388E3C" opacity="0.7"/>
+  </g>
+  <g transform="translate(55, 215) rotate(15)">
+    <ellipse cx="0" cy="0" rx="4" ry="12" fill="#C62828" opacity="0.5"/>
+    <ellipse cx="0" cy="-10" rx="2" ry="3" fill="#2E7D32" opacity="0.6"/>
+  </g>
+
+  <!-- Spice seeds scattered -->
+  <ellipse cx="245" cy="210" rx="3" ry="5" fill="#795548" opacity="0.5" transform="rotate(45, 245, 210)"/>
+  <circle cx="70" cy="240" r="3" fill="#6D4C41" opacity="0.4"/>
+  <ellipse cx="230" cy="50" rx="2" ry="4" fill="#795548" opacity="0.4" transform="rotate(20, 230, 50)"/>
+
+  <!-- Spoon with powder -->
+  <g transform="translate(58, 172) rotate(-25)">
+    <ellipse cx="0" cy="0" rx="22" ry="14" fill="#BCAAA4" stroke="#795548" stroke-width="1"/>
+    <ellipse cx="0" cy="-2" rx="18" ry="10" fill="url(#powderGrad)"/>
+    <rect x="20" y="-3" width="60" height="6" rx="3" fill="#BCAAA4" stroke="#795548" stroke-width="1"/>
+  </g>
+
+  <!-- Curry leaves decoration -->
+  <g transform="translate(195, 185)">
+    <path d="M0,0 Q-8,-15 -5,-25 Q2,-15 0,0" fill="#2E7D32" opacity="0.7"/>
+    <path d="M8,-5 Q0,-20 3,-30 Q10,-20 8,-5" fill="#388E3C" opacity="0.7"/>
+    <path d="M-8,-10 Q-16,-25 -13,-35 Q-6,-25 -8,-10" fill="#2E7D32" opacity="0.6"/>
+    <path d="M0,-2 Q8,-17 5,-27 Q12,-17 0,-2" fill="#43A047" opacity="0.6"/>
+    <line x1="-15" y1="-32" x2="10" y2="-28" stroke="#1B5E20" stroke-width="1.5" opacity="0.5"/>
+  </g>
+
+  <!-- Main jar -->
+  <g transform="translate(90, 95)">
+    <rect x="15" y="40" width="90" height="100" rx="10" fill="url(#jarGrad)" stroke="#FF7043" stroke-width="2"/>
+    <rect x="25" y="25" width="70" height="22" rx="5" fill="#FFF8F5" stroke="#FF7043" stroke-width="1.5"/>
+    <!-- Lid - warm red -->
+    <rect x="18" y="12" width="84" height="18" rx="6" fill="#D84315" stroke="#BF360C" stroke-width="2"/>
+    <rect x="35" y="8" width="50" height="8" rx="3" fill="#BF360C"/>
+
+    <!-- Powder inside -->
+    <ellipse cx="60" cy="110" rx="38" ry="10" fill="#EF6C00" opacity="0.55"/>
+    <rect x="22" y="100" width="76" height="38" rx="0" fill="#EF6C00" opacity="0.25"/>
+
+    <!-- Label -->
+    <rect x="20" y="60" width="80" height="55" rx="5" fill="white" opacity="0.75" stroke="#FF7043" stroke-width="1"/>
+    <rect x="30" y="70" width="60" height="5" rx="2" fill="#D84315"/>
+    <rect x="35" y="80" width="50" height="4" rx="2" fill="#E64A19" opacity="0.7"/>
+    <rect x="30" y="90" width="60" height="4" rx="2" fill="#EF6C00" opacity="0.5"/>
+    <rect x="38" y="100" width="44" height="4" rx="2" fill="#FF7043" opacity="0.5"/>
+
+    <ellipse cx="30" cy="80" rx="6" ry="18" fill="white" opacity="0.25" transform="rotate(-10, 30, 80)"/>
+  </g>
+
+  <!-- Powder spill -->
+  <ellipse cx="150" cy="215" rx="55" ry="9" fill="#EF6C00" opacity="0.4"/>
+  <ellipse cx="140" cy="218" rx="30" ry="6" fill="#D84315" opacity="0.35"/>
+
+  <text x="150" y="256" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#BF360C" text-anchor="middle">Sambar Powder</text>
+  <text x="150" y="274" font-family="Georgia, serif" font-size="11" fill="#D84315" text-anchor="middle">Authentic South Indian Blend</text>
+</svg>

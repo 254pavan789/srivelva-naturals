@@ -1,0 +1,53 @@
+/* ══════════════════════════════════════════
+   EmptyState — Sri Velva Naturals
+   Apple / Aesop style — generous whitespace,
+   botanical illustration, refined type
+   ══════════════════════════════════════════ */
+
+.empty-state-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 2rem 7rem;
+  gap: 1.25rem;
+  animation: fadeUp 0.6s cubic-bezier(0.25,0.46,0.45,0.94) both;
+}
+
+/* ── Illustration ── */
+.es-illustration {
+  margin-bottom: 0.5rem;
+  animation: esBob 4s ease-in-out infinite;
+}
+
+@keyframes esBob {
+  0%, 100% { transform: translateY(0);    }
+  50%       { transform: translateY(-8px); }
+}
+
+/* ── Title ── */
+.es-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 600;
+  color: var(--forest);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+/* ── Message ── */
+.es-message {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--bark);
+  line-height: 1.75;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+/* ── CTA button ── */
+.es-cta {
+  margin-top: 0.5rem;
+}

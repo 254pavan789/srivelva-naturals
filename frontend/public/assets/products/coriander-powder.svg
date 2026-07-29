@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#F1F8E9"/>
+      <stop offset="100%" stop-color="#DCEDC8"/>
+    </radialGradient>
+    <radialGradient id="jarGrad" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#F6FAF0"/>
+      <stop offset="100%" stop-color="#DCEDC8"/>
+    </radialGradient>
+    <radialGradient id="powderGrad" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#9E8B3A"/>
+      <stop offset="60%" stop-color="#7A6B2C"/>
+      <stop offset="100%" stop-color="#5C5020"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <circle cx="150" cy="150" r="148" fill="url(#bgGrad)" stroke="#689F38" stroke-width="2"/>
+
+  <!-- Coriander seeds scattered -->
+  <ellipse cx="45" cy="65" rx="5" ry="5" fill="#9E8B3A" opacity="0.5"/>
+  <ellipse cx="255" cy="80" rx="4" ry="4" fill="#7A6B2C" opacity="0.5"/>
+  <ellipse cx="60" cy="225" rx="5" ry="5" fill="#9E8B3A" opacity="0.4"/>
+  <ellipse cx="242" cy="230" rx="4" ry="4" fill="#7A6B2C" opacity="0.4"/>
+  <ellipse cx="78" cy="46" rx="4" ry="4" fill="#9E8B3A" opacity="0.4"/>
+  <ellipse cx="225" cy="52" rx="5" ry="5" fill="#7A6B2C" opacity="0.4"/>
+  <ellipse cx="38" cy="170" rx="4" ry="4" fill="#9E8B3A" opacity="0.3"/>
+  <ellipse cx="265" cy="175" rx="3" ry="3" fill="#7A6B2C" opacity="0.3"/>
+
+  <!-- Coriander leaf cluster top-right -->
+  <g transform="translate(205, 60)">
+    <path d="M0,0 Q-10,-20 0,-35 Q10,-20 0,0" fill="#8BC34A" opacity="0.7"/>
+    <path d="M0,0 Q-18,-12 -20,-28 Q-8,-16 0,0" fill="#7CB342" opacity="0.7"/>
+    <path d="M0,0 Q18,-12 20,-28 Q8,-16 0,0" fill="#8BC34A" opacity="0.7"/>
+    <path d="M0,0 Q-15,5 -22,-5 Q-10,-2 0,0" fill="#7CB342" opacity="0.6"/>
+    <path d="M0,0 Q15,5 22,-5 Q10,-2 0,0" fill="#8BC34A" opacity="0.6"/>
+    <line x1="0" y1="0" x2="0" y2="-35" stroke="#558B2F" stroke-width="1.5" opacity="0.5"/>
+    <!-- Seeds -->
+    <circle cx="0" cy="5" r="3.5" fill="#9E8B3A" opacity="0.8"/>
+    <circle cx="-6" cy="2" r="3" fill="#7A6B2C" opacity="0.7"/>
+    <circle cx="6" cy="2" r="3" fill="#9E8B3A" opacity="0.7"/>
+  </g>
+
+  <!-- Spoon -->
+  <g transform="translate(58, 172) rotate(-25)">
+    <ellipse cx="0" cy="0" rx="22" ry="14" fill="#C5E1A5" stroke="#689F38" stroke-width="1"/>
+    <ellipse cx="0" cy="-2" rx="18" ry="10" fill="url(#powderGrad)"/>
+    <rect x="20" y="-3" width="60" height="6" rx="3" fill="#C5E1A5" stroke="#689F38" stroke-width="1"/>
+  </g>
+
+  <!-- Small coriander leaf bottom-left -->
+  <g transform="translate(50, 200) rotate(-20)">
+    <path d="M0,0 Q-8,-16 0,-28 Q8,-16 0,0" fill="#8BC34A" opacity="0.65"/>
+    <path d="M0,0 Q-14,-10 -16,-22 Q-6,-12 0,0" fill="#7CB342" opacity="0.65"/>
+    <path d="M0,0 Q14,-10 16,-22 Q6,-12 0,0" fill="#8BC34A" opacity="0.65"/>
+    <line x1="0" y1="0" x2="0" y2="-28" stroke="#558B2F" stroke-width="1.5" opacity="0.5"/>
+  </g>
+
+  <!-- Main jar -->
+  <g transform="translate(90, 95)">
+    <rect x="15" y="40" width="90" height="100" rx="10" fill="url(#jarGrad)" stroke="#8BC34A" stroke-width="2"/>
+    <rect x="25" y="25" width="70" height="22" rx="5" fill="#F6FAF0" stroke="#8BC34A" stroke-width="1.5"/>
+    <!-- Lid - green -->
+    <rect x="18" y="12" width="84" height="18" rx="6" fill="#558B2F" stroke="#33691E" stroke-width="2"/>
+    <rect x="35" y="8" width="50" height="8" rx="3" fill="#33691E"/>
+
+    <!-- Powder inside -->
+    <ellipse cx="60" cy="110" rx="38" ry="10" fill="#9E8B3A" opacity="0.5"/>
+    <rect x="22" y="100" width="76" height="38" rx="0" fill="#9E8B3A" opacity="0.22"/>
+
+    <!-- Label -->
+    <rect x="20" y="60" width="80" height="55" rx="5" fill="white" opacity="0.75" stroke="#8BC34A" stroke-width="1"/>
+    <rect x="30" y="70" width="60" height="5" rx="2" fill="#558B2F"/>
+    <rect x="35" y="80" width="50" height="4" rx="2" fill="#689F38" opacity="0.7"/>
+    <rect x="30" y="90" width="60" height="4" rx="2" fill="#7CB342" opacity="0.5"/>
+    <rect x="38" y="100" width="44" height="4" rx="2" fill="#8BC34A" opacity="0.5"/>
+
+    <ellipse cx="30" cy="80" rx="6" ry="18" fill="white" opacity="0.25" transform="rotate(-10, 30, 80)"/>
+  </g>
+
+  <!-- Powder spill -->
+  <ellipse cx="150" cy="215" rx="55" ry="9" fill="#9E8B3A" opacity="0.4"/>
+  <ellipse cx="140" cy="218" rx="30" ry="6" fill="#7A6B2C" opacity="0.35"/>
+
+  <text x="150" y="256" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#33691E" text-anchor="middle">Coriander Powder</text>
+  <text x="150" y="274" font-family="Georgia, serif" font-size="11" fill="#558B2F" text-anchor="middle">Slow Roasted • 100% Pure</text>
+</svg>

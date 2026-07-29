@@ -1,0 +1,15 @@
+# ── Sri Velva Naturals — Netlify HTTP Headers ────────────────────────────────
+#
+# HOW TO USE:
+#   Copy this file to: frontend/public/_headers
+#   (Netlify reads _headers from the publish directory after build)
+#   It will be automatically copied to dist/_headers by the vite build plugin.
+#
+# PRODUCTION CSP — no unsafe-eval (production builds have zero eval calls)
+#
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://checkout.razorpay.com https://api.razorpay.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://images.unsplash.com https://checkout.razorpay.com; frame-src 'self' https://api.razorpay.com https://checkout.razorpay.com; connect-src 'self' https://api.razorpay.com https://checkout.razorpay.com; worker-src 'self' blob:
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()

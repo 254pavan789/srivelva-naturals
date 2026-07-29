@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <radialGradient id="bg7" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#F0F7EE"/>
+      <stop offset="100%" stop-color="#D8EDDA"/>
+    </radialGradient>
+    <radialGradient id="jar7" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#F4FCF2"/>
+      <stop offset="100%" stop-color="#C8E8C4"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" rx="24" fill="url(#bg7)"/>
+  <ellipse cx="52" cy="65" rx="28" ry="14" fill="#2E7D32" opacity="0.18" transform="rotate(-20 52 65)"/>
+  <ellipse cx="348" cy="335" rx="28" ry="14" fill="#2E7D32" opacity="0.18" transform="rotate(-20 348 335)"/>
+  <!-- Jar body -->
+  <rect x="118" y="160" width="164" height="154" rx="18" fill="url(#jar7)" stroke="#2E7D32" stroke-width="2.5"/>
+  <!-- Powder/paste -->
+  <ellipse cx="200" cy="298" rx="70" ry="16" fill="#558B2F" opacity="0.72"/>
+  <rect x="130" y="255" width="140" height="43" rx="0" fill="#558B2F" opacity="0.25"/>
+  <!-- Lid -->
+  <rect x="108" y="132" width="184" height="34" rx="12" fill="#2E7D32"/>
+  <rect x="128" y="124" width="144" height="14" rx="7" fill="#1B5E20"/>
+  <!-- Label -->
+  <rect x="133" y="175" width="134" height="96" rx="8" fill="white" opacity="0.84"/>
+  <rect x="133" y="175" width="134" height="22" rx="8" fill="#2E7D32"/>
+  <text x="200" y="191" font-family="Arial,sans-serif" font-size="8.5" fill="white" text-anchor="middle" font-weight="bold">FACE PACK</text>
+  <text x="200" y="216" font-family="Georgia,serif" font-size="14" fill="#1B5E20" text-anchor="middle" font-weight="bold">NEEM</text>
+  <text x="200" y="232" font-family="Georgia,serif" font-size="12" fill="#1B5E20" text-anchor="middle" font-weight="bold">FACE PACK</text>
+  <line x1="146" y1="240" x2="254" y2="240" stroke="#2E7D32" stroke-width="1" opacity="0.4"/>
+  <text x="200" y="254" font-family="Arial,sans-serif" font-size="8" fill="#33691E" text-anchor="middle">ANTI-ACNE</text>
+  <text x="200" y="266" font-family="Arial,sans-serif" font-size="8" fill="#33691E" text-anchor="middle">DEEP CLEANSING</text>
+  <!-- Neem leaf -->
+  <circle cx="200" cy="92" r="36" fill="#558B2F" opacity="0.12"/>
+  <path d="M200,62 Q222,74 220,97 Q210,110 196,107 Q180,100 182,78 Q190,64 200,62Z" fill="#2E7D32" opacity="0.58"/>
+  <line x1="200" y1="64" x2="200" y2="108" stroke="#1B5E20" stroke-width="2" opacity="0.6"/>
+  <line x1="200" y1="76" x2="190" y2="84" stroke="#1B5E20" stroke-width="1.2" opacity="0.5"/>
+  <line x1="200" y1="84" x2="192" y2="94" stroke="#1B5E20" stroke-width="1.2" opacity="0.5"/>
+  <line x1="200" y1="76" x2="210" y2="84" stroke="#1B5E20" stroke-width="1.2" opacity="0.5"/>
+  <line x1="200" y1="84" x2="210" y2="94" stroke="#1B5E20" stroke-width="1.2" opacity="0.5"/>
+  <!-- Brand -->
+  <text x="200" y="374" font-family="Georgia,serif" font-size="12" fill="#1B5E20" text-anchor="middle" opacity="0.7">Sri Velva Naturals</text>
+</svg>

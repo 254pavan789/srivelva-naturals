@@ -1,0 +1,356 @@
+/* ══════════════════════════════════════════
+   ProductCard — Sri Velva Naturals
+   Premium: lift on hover · image zoom · shadow · cart animation
+   ══════════════════════════════════════════ */
+
+/* ── Card shell ── */
+.product-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+
+  /*
+   * Three-layer shadow at rest:
+   * 1. hairline border-like ring (replaces border for cleaner look)
+   * 2. soft mid diffuse
+   * 3. gentle ambient fill
+   */
+  box-shadow: var(--shadow-card);
+
+  /* Remove separate border — the shadow ring handles edge definition */
+  border: none;
+
+  transition:
+    transform   0.48s cubic-bezier(0.25, 0.46, 0.45, 0.94),  /* was 0.40s */
+    box-shadow  0.48s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.product-card:hover {
+  transform: translateY(-5px) scale(1.005);   /* was -7px / 1.007 */
+  box-shadow:
+    0 0   0  1px rgba(45,80,22,0.05),
+    0 5px 16px rgba(45,80,22,0.08),
+    0 18px 46px rgba(45,80,22,0.12);
+}
+
+.product-card:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* ── Image area ── */
+.pc-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  background: #f6f3ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.pc-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s ease;
+  will-change: transform;
+}
+
+.product-card:hover .pc-image {
+  transform: scale(1.03);
+}
+
+/* ── Category pill (top-left) ── */
+.pc-category-pill {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.26rem 0.75rem;
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 2;
+}
+
+.pill-gold {
+  background: rgba(254,240,199,0.92);
+  color: #92620A;
+  border: 1px solid rgba(184,134,11,0.22);
+}
+
+.pill-green {
+  background: rgba(200,222,181,0.92);
+  color: var(--forest);
+  border: 1px solid rgba(45,80,22,0.18);
+}
+
+/* ── Hover overlay with "View Details" ── */
+.pc-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(30,55,14,0.65) 0%,    /* was 0.72 — slightly more transparent */
+    rgba(30,55,14,0.22) 55%,
+    transparent 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 1.4rem;
+  opacity: 0;
+  transition: opacity 0.45s ease;   /* was 0.32s — smoother fade */
+}
+
+.product-card:hover .pc-overlay { opacity: 1; }
+
+.pc-overlay-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255,255,255,0.96);
+  color: var(--forest);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  transform: translateY(8px);        /* was 10px — less travel */
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* was 0.32s */
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.product-card:hover .pc-overlay-cta {
+  transform: translateY(0);
+}
+
+/* ── Card body ── */
+.pc-body {
+  padding: 1.3rem 1.3rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.5rem;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Product name — Playfair Display */
+.pc-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--forest);
+  line-height: 1.3;
+  /* Two-line clamp so all cards stay same height */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Short description — Poppins light */
+.pc-desc {
+  font-family: var(--font-body);
+  font-size: 0.77rem;
+  font-weight: 300;
+  color: var(--bark);
+  line-height: 1.65;
+  flex: 1;
+  /* Three-line clamp for uniform card height */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Footer row: price + button ── */
+.pc-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(45,80,22,0.07);
+}
+
+/* ── Price: plain ₹299, no heavy styling ── */
+.pc-price {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* ══════════════════════════════════
+   ADD TO CART BUTTON
+   Calm hover · soft press · no spring
+   ══════════════════════════════════ */
+.pc-cart-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.38rem;
+  flex-shrink: 0;
+
+  padding: 0.52rem 1.1rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--forest);
+  background: var(--forest);
+  color: var(--white);
+
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+
+  box-shadow: 0 2px 8px rgba(45,80,22,0.18);
+
+  /*
+   * Replaced springy cubic-bezier(0.34,1.56,0.64,1) with a
+   * calm ease-out. The bounce felt cheap on a premium product.
+   */
+  transition:
+    background   0.32s ease,
+    border-color 0.32s ease,
+    transform    0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow   0.32s ease;
+
+  min-width: 110px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shimmer layer */
+.pc-cart-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.10);
+  opacity: 0;
+  transition: opacity 0.28s ease;
+  border-radius: inherit;
+}
+.pc-cart-btn:hover::after { opacity: 1; }
+
+/* Hover — calm lift, no jump */
+.pc-cart-btn:hover {
+  background: var(--fern);
+  border-color: var(--fern);
+  transform: scale(1.04) translateY(-1px);   /* was 1.07 */
+  box-shadow: 0 6px 18px rgba(45,80,22,0.24); /* was 0 8px 22px / 0.30 */
+}
+
+/* Press — brief compress, no bounce */
+.pc-cart-btn:active {
+  transform: scale(0.97) translateY(0) !important;
+  box-shadow: 0 1px 6px rgba(45,80,22,0.15) !important;
+  transition-duration: 0.10s !important;
+}
+
+/* Focus-visible — gold ring for keyboard users */
+.pc-cart-btn:focus-visible {
+  outline: 2.5px solid var(--gold);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px rgba(184,134,11,0.16), 0 2px 8px rgba(45,80,22,0.18);
+}
+
+/* Added state — confirmed, pointer locked */
+.pc-cart-btn--added {
+  background: #3a7d2c;
+  border-color: #3a7d2c;
+  box-shadow: 0 3px 12px rgba(58,125,44,0.24);
+  /*
+   * Soft pulse instead of hard spring pop.
+   * 0.45s ease-out feels settled and confident.
+   */
+  animation: cartConfirm 0.45s ease-out both;
+  pointer-events: none;
+}
+
+@keyframes cartConfirm {
+  0%   { transform: scale(1);    }
+  40%  { transform: scale(1.06); }  /* was 1.14 — much softer */
+  100% { transform: scale(1);    }
+}
+
+.pc-btn-check {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* ── Out of Stock overlay badge ── */
+.pc-oos-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(198, 40, 40, 0.92);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  white-space: nowrap;
+  z-index: 3;
+  pointer-events: none;
+  backdrop-filter: blur(2px);
+}
+
+/* dim image when out of stock */
+.pc-image--oos {
+  filter: grayscale(0.6) opacity(0.75);
+}
+
+/* Low stock message */
+.pc-low-stock {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #e65100;
+  background: #fff3e0;
+  border: 1px solid #ffcc80;
+  border-radius: 12px;
+  padding: 0.18rem 0.6rem;
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.02em;
+}
+
+/* Unavailable button */
+.pc-cart-btn--unavailable {
+  background: #e0e0e0 !important;
+  color: #9e9e9e !important;
+  cursor: not-allowed !important;
+  border: none;
+  border-radius: 8px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: inherit;
+  opacity: 0.8;
+}

@@ -1,0 +1,231 @@
+/* ══════════════════════════════════════════
+   Products Page — Sri Velva Naturals
+   ══════════════════════════════════════════ */
+
+/* ── Hero banner ── */
+.products-hero {
+  background: linear-gradient(
+    160deg,
+    #eef7e6 0%,
+    #f5eddb 60%,
+    var(--sand) 100%
+  );
+  padding: 0.75rem 0 1.25rem;
+  padding-top: calc(115px + 0.25rem);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft decorative circle */
+.products-hero::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(184,134,11,0.07), transparent 70%);
+  pointer-events: none;
+}
+
+.products-hero .label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--gold);
+}
+
+.products-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.5vw, 2.6rem);
+  font-weight: 600;
+  color: var(--forest);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.products-hero p {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--bark);
+  line-height: 1.7;
+  max-width: 100%;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Products body ── */
+.products-body {
+  padding: 2rem 0 5rem;
+}
+
+/* ── Filter bar ── */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--linen);
+}
+
+.filter-label {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--bark);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.filter-tab {
+  padding: 0.5rem 1.35rem;
+  border-radius: 999px;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--forest);
+  border: 1.5px solid var(--linen);
+  background: var(--white);
+  cursor: pointer;
+  transition:
+    background  0.24s ease,
+    border-color 0.24s ease,
+    color       0.24s ease,
+    transform   0.2s  ease,
+    box-shadow  0.24s ease;
+}
+
+.filter-tab:hover {
+  border-color: var(--sage);
+  background: var(--mist);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(45,80,22,0.09);
+}
+
+.filter-tab.active {
+  background: var(--forest);
+  color: var(--white);
+  border-color: var(--forest);
+  box-shadow: 0 4px 14px rgba(45,80,22,0.25);
+  transform: translateY(-1px);
+}
+
+.filter-tab.active:hover {
+  background: var(--fern);
+  border-color: var(--fern);
+}
+
+/* Product count pill */
+.product-count {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--bark);
+  white-space: nowrap;
+  background: var(--mist);
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--linen);
+  margin-left: auto;
+}
+
+/* ── Product grid — overrides globals .grid-3 ── */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 1100px) {
+  .products-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }  /* was 1.75rem */
+}
+
+@media (max-width: 640px) {
+  .products-grid { grid-template-columns: 1fr; gap: 1.1rem; }  /* was 1.4rem @ 560px */
+}
+
+/*
+ * Card entrance animation — applied to each card's wrapper div.
+ * Duration 0.65s (was 0.5s) + gentler Y (16px was 24px) = calm cascade.
+ * animation-fill-mode:both means cards stay invisible until their
+ * delay fires, preventing a flash of all cards at once.
+ */
+.products-grid > div {
+  animation: cardSlideUp 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  /* Ensure wrapper fills grid cell so all cards stretch to same height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Every card inside the grid fills its wrapper's full height */
+.products-grid .product-card {
+  height: 100%;
+}
+
+@keyframes cardSlideUp {
+  from { opacity: 0; transform: translateY(16px); }  /* was 24px */
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Empty state ── */
+.empty-state {
+  text-align: center;
+  padding: 7rem 2rem;
+}
+
+.empty-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1.25rem;
+  display: block;
+  filter: grayscale(0.2);
+}
+
+.empty-state h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--forest);
+  margin-bottom: 0.6rem;
+}
+
+.empty-state p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--bark);
+  font-weight: 300;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .products-hero { padding-top: calc(100px + 1.25rem); }
+}
+
+@media (max-width: 768px) {
+  .products-hero  { padding-top: calc(90px + 1rem); padding-bottom: 2rem; }
+  .products-body  { padding: 1.75rem 0 3.5rem; }
+  .filter-bar     { gap: 0.6rem; margin-bottom: 1.25rem; padding-bottom: 1rem; }
+  .product-count  { display: none; }
+  .filter-label   { display: none; }
+}
+
+@media (max-width: 480px) {
+  .products-hero { padding-top: calc(90px + 0.75rem); padding-bottom: 1.5rem; }
+  .filter-tab    { padding: 0.4rem 0.85rem; font-size: 0.7rem; }
+  .filter-tabs   { gap: 0.3rem; }
+}

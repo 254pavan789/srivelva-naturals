@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFF8E7"/>
+      <stop offset="100%" stop-color="#FDE68A"/>
+    </radialGradient>
+    <radialGradient id="powderGrad" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="60%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </radialGradient>
+    <radialGradient id="jarGrad" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FEF3C7"/>
+      <stop offset="100%" stop-color="#FDE68A"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <circle cx="150" cy="150" r="148" fill="url(#bgGrad)" stroke="#F59E0B" stroke-width="2"/>
+
+  <!-- Scattered powder dots background -->
+  <circle cx="40" cy="60" r="4" fill="#FBBF24" opacity="0.5"/>
+  <circle cx="260" cy="80" r="3" fill="#F59E0B" opacity="0.5"/>
+  <circle cx="55" cy="220" r="5" fill="#FBBF24" opacity="0.4"/>
+  <circle cx="245" cy="230" r="4" fill="#D97706" opacity="0.4"/>
+  <circle cx="80" cy="40" r="3" fill="#F59E0B" opacity="0.3"/>
+  <circle cx="220" cy="50" r="2" fill="#FBBF24" opacity="0.4"/>
+
+  <!-- Turmeric root/rhizome decorative element top-right -->
+  <g transform="translate(195, 55) rotate(30)">
+    <ellipse cx="0" cy="0" rx="28" ry="12" fill="#D97706" opacity="0.8"/>
+    <ellipse cx="22" cy="-4" rx="12" ry="7" fill="#B45309" opacity="0.7"/>
+    <ellipse cx="-20" cy="4" rx="10" ry="6" fill="#B45309" opacity="0.7"/>
+    <ellipse cx="8" cy="-10" rx="7" ry="5" fill="#D97706" opacity="0.6"/>
+  </g>
+
+  <!-- Spoon with powder -->
+  <g transform="translate(60, 170) rotate(-25)">
+    <ellipse cx="0" cy="0" rx="22" ry="14" fill="#D4A017" stroke="#B8860B" stroke-width="1"/>
+    <ellipse cx="0" cy="-2" rx="18" ry="10" fill="url(#powderGrad)"/>
+    <!-- Spoon handle -->
+    <rect x="20" y="-3" width="60" height="6" rx="3" fill="#C0A060" stroke="#A08040" stroke-width="1"/>
+  </g>
+
+  <!-- Main jar -->
+  <g transform="translate(90, 95)">
+    <!-- Jar body -->
+    <rect x="15" y="40" width="90" height="100" rx="10" fill="url(#jarGrad)" stroke="#F59E0B" stroke-width="2"/>
+    <!-- Jar neck -->
+    <rect x="25" y="25" width="70" height="22" rx="5" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+    <!-- Lid -->
+    <rect x="18" y="12" width="84" height="18" rx="6" fill="#D97706" stroke="#B45309" stroke-width="2"/>
+    <rect x="35" y="8" width="50" height="8" rx="3" fill="#B45309"/>
+
+    <!-- Powder mound inside jar (visible through glass) -->
+    <ellipse cx="60" cy="110" rx="38" ry="10" fill="#F59E0B" opacity="0.6"/>
+    <rect x="22" y="100" width="76" height="38" rx="0" fill="#F59E0B" opacity="0.3"/>
+
+    <!-- Label area -->
+    <rect x="20" y="60" width="80" height="55" rx="5" fill="white" opacity="0.7" stroke="#F59E0B" stroke-width="1"/>
+
+    <!-- Label text lines -->
+    <rect x="30" y="70" width="60" height="5" rx="2" fill="#D97706"/>
+    <rect x="35" y="80" width="50" height="4" rx="2" fill="#F59E0B" opacity="0.7"/>
+    <rect x="30" y="90" width="60" height="4" rx="2" fill="#F59E0B" opacity="0.5"/>
+    <rect x="38" y="100" width="44" height="4" rx="2" fill="#FBBF24" opacity="0.5"/>
+
+    <!-- Shine on jar -->
+    <ellipse cx="30" cy="80" rx="6" ry="18" fill="white" opacity="0.25" transform="rotate(-10, 30, 80)"/>
+  </g>
+
+  <!-- Powder spill at base -->
+  <ellipse cx="150" cy="215" rx="55" ry="10" fill="#FBBF24" opacity="0.5"/>
+  <ellipse cx="135" cy="218" rx="30" ry="7" fill="#F59E0B" opacity="0.4"/>
+
+  <!-- Leaf decoration bottom-left -->
+  <g transform="translate(50, 195) rotate(-40)">
+    <ellipse cx="0" cy="0" rx="18" ry="8" fill="#65A30D" opacity="0.7"/>
+    <line x1="-18" y1="0" x2="18" y2="0" stroke="#4D7C0F" stroke-width="1" opacity="0.8"/>
+  </g>
+
+  <!-- Title text -->
+  <text x="150" y="256" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#92400E" text-anchor="middle">Turmeric Powder</text>
+  <text x="150" y="274" font-family="Georgia, serif" font-size="11" fill="#B45309" text-anchor="middle">100% Pure • Stone Ground</text>
+</svg>

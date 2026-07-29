@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#F7FAF5"/>
+      <stop offset="100%" stop-color="#E0EDD8"/>
+    </radialGradient>
+    <linearGradient id="jarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4EDD0"/>
+      <stop offset="50%" stop-color="#F0FAF0"/>
+      <stop offset="100%" stop-color="#B8D8B0"/>
+    </linearGradient>
+  </defs>
+  <circle cx="150" cy="150" r="148" fill="url(#bg)" stroke="#8BBF82" stroke-width="2"/>
+  <!-- Wide jar body -->
+  <rect x="100" y="148" width="100" height="90" rx="10" fill="url(#jarGrad)" stroke="#8BBF82" stroke-width="1.5"/>
+  <!-- Jar lid -->
+  <rect x="96" y="130" width="108" height="22" rx="8" fill="#5C9E52" opacity="0.9"/>
+  <!-- Oil texture inside jar (white solid coconut oil) -->
+  <rect x="104" y="165" width="92" height="60" rx="6" fill="white" opacity="0.7"/>
+  <!-- Coconut half -->
+  <ellipse cx="100" cy="195" rx="32" ry="28" fill="#6B4226" opacity="0.85"/>
+  <ellipse cx="100" cy="190" rx="26" ry="20" fill="#3D200F"/>
+  <!-- Coconut flesh inside -->
+  <ellipse cx="100" cy="193" rx="18" ry="14" fill="#F5E6D0"/>
+  <!-- Palm leaves -->
+  <path d="M205,100 Q235,80 220,115 Q210,105 205,100" fill="#6DB860" opacity="0.8"/>
+  <path d="M210,115 Q245,110 225,140 Q215,128 210,115" fill="#5CA84E" opacity="0.7"/>
+  <path d="M195,95 Q200,65 220,85 Q210,90 195,95" fill="#7DC870" opacity="0.7"/>
+  <!-- Label on jar -->
+  <rect x="110" y="168" width="80" height="48" rx="4" fill="white" opacity="0.9"/>
+  <text x="150" y="183" font-family="Georgia,serif" font-size="7" fill="#3A7A35" text-anchor="middle" font-weight="bold">VIRGIN</text>
+  <text x="150" y="193" font-family="Georgia,serif" font-size="7" fill="#3A7A35" text-anchor="middle">COCONUT OIL</text>
+  <text x="150" y="205" font-family="Georgia,serif" font-size="6" fill="#5C9E52" text-anchor="middle">Extra Virgin • Cold Pressed</text>
+  <text x="150" y="258" font-family="Georgia,serif" font-size="13" fill="#5C8A4E" text-anchor="middle">Sri Velva Naturals</text>
+</svg>

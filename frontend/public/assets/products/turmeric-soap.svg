@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFFDF0"/>
+      <stop offset="100%" stop-color="#F8EFC0"/>
+    </radialGradient>
+    <linearGradient id="soapGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F5C830"/>
+      <stop offset="100%" stop-color="#D4A010"/>
+    </linearGradient>
+  </defs>
+  <circle cx="150" cy="150" r="148" fill="url(#bg)" stroke="#D4B020" stroke-width="2"/>
+  <!-- Soap bar -->
+  <rect x="88" y="145" width="124" height="80" rx="16" fill="url(#soapGrad)" opacity="0.92"/>
+  <!-- Soap top face (3D effect) -->
+  <ellipse cx="150" cy="145" rx="62" ry="18" fill="#F8D848" opacity="0.9"/>
+  <!-- Engraved text on soap top -->
+  <text x="150" y="140" font-family="Georgia,serif" font-size="9" fill="#B8880A" text-anchor="middle" font-style="italic">Natural</text>
+  <text x="150" y="152" font-family="Georgia,serif" font-size="8" fill="#B8880A" text-anchor="middle">TURMERIC</text>
+  <!-- Turmeric root -->
+  <path d="M78,180 Q62,175 60,165 Q58,155 70,153 Q80,151 82,162 Q84,170 78,180" fill="#E8921A" opacity="0.9"/>
+  <path d="M70,160 Q65,148 72,142" stroke="#E8921A" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.8"/>
+  <path d="M75,155 Q68,145 74,138" stroke="#D47818" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <!-- Another turmeric piece -->
+  <path d="M222,190 Q240,185 242,172 Q244,160 230,158 Q218,157 217,170 Q216,180 222,190" fill="#E8921A" opacity="0.85"/>
+  <!-- Bubbles -->
+  <circle cx="120" cy="130" r="7" fill="white" opacity="0.6"/>
+  <circle cx="115" cy="130" r="2.5" fill="white" opacity="0.4"/>
+  <circle cx="180" cy="125" r="9" fill="white" opacity="0.55"/>
+  <circle cx="176" cy="124" r="3" fill="white" opacity="0.35"/>
+  <circle cx="155" cy="122" r="6" fill="white" opacity="0.5"/>
+  <!-- Front label strip -->
+  <rect x="100" y="175" width="100" height="30" rx="4" fill="white" opacity="0.4"/>
+  <text x="150" y="188" font-family="Georgia,serif" font-size="7" fill="#8B6800" text-anchor="middle">100% Natural · No SLS</text>
+  <text x="150" y="198" font-family="Georgia,serif" font-size="7" fill="#8B6800" text-anchor="middle">Anti-bacterial · Brightening</text>
+  <text x="150" y="258" font-family="Georgia,serif" font-size="13" fill="#A08010" text-anchor="middle">Sri Velva Naturals</text>
+</svg>

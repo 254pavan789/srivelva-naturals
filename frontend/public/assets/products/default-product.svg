@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#F9F5EE"/>
+      <stop offset="100%" stop-color="#EDE8DF"/>
+    </radialGradient>
+  </defs>
+  <circle cx="150" cy="150" r="148" fill="url(#bg)" stroke="#C8B89A" stroke-width="2"/>
+  <!-- Simple jar outline -->
+  <rect x="100" y="110" width="100" height="110" rx="12" fill="none" stroke="#C8B89A" stroke-width="3"/>
+  <rect x="110" y="90" width="80" height="25" rx="6" fill="none" stroke="#C8B89A" stroke-width="2.5"/>
+  <rect x="118" y="82" width="64" height="12" rx="4" fill="#C8B89A" opacity="0.5"/>
+  <!-- Leaf -->
+  <path d="M150,160 Q138,140 140,125 Q155,140 150,160" fill="#A3B899" opacity="0.5"/>
+  <text x="150" y="258" font-family="Georgia, serif" font-size="14" fill="#A09070" text-anchor="middle">Sri Velva Naturals</text>
+</svg>

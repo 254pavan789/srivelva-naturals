@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <radialGradient id="bg6" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#FFF0F3"/>
+      <stop offset="100%" stop-color="#F5D9DF"/>
+    </radialGradient>
+    <radialGradient id="jar6" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFF8F9"/>
+      <stop offset="100%" stop-color="#F2C4CE"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" rx="24" fill="url(#bg6)"/>
+  <ellipse cx="52" cy="65" rx="28" ry="14" fill="#D9738A" opacity="0.18" transform="rotate(-20 52 65)"/>
+  <ellipse cx="348" cy="335" rx="28" ry="14" fill="#D9738A" opacity="0.18" transform="rotate(-20 348 335)"/>
+  <!-- Jar body -->
+  <rect x="118" y="160" width="164" height="154" rx="18" fill="url(#jar6)" stroke="#D9738A" stroke-width="2.5"/>
+  <!-- Powder -->
+  <ellipse cx="200" cy="298" rx="70" ry="16" fill="#F4A7B9" opacity="0.88"/>
+  <rect x="130" y="255" width="140" height="43" rx="0" fill="#F4A7B9" opacity="0.32"/>
+  <!-- Lid -->
+  <rect x="108" y="132" width="184" height="34" rx="12" fill="#D9738A"/>
+  <rect x="128" y="124" width="144" height="14" rx="7" fill="#C45E77"/>
+  <!-- Label -->
+  <rect x="133" y="175" width="134" height="96" rx="8" fill="white" opacity="0.82"/>
+  <rect x="133" y="175" width="134" height="22" rx="8" fill="#D9738A"/>
+  <text x="200" y="191" font-family="Arial,sans-serif" font-size="8.5" fill="white" text-anchor="middle" font-weight="bold">POWDER</text>
+  <text x="200" y="216" font-family="Georgia,serif" font-size="14" fill="#8B2A40" text-anchor="middle" font-weight="bold">ROSE</text>
+  <text x="200" y="232" font-family="Georgia,serif" font-size="13" fill="#8B2A40" text-anchor="middle" font-weight="bold">POWDER</text>
+  <line x1="146" y1="240" x2="254" y2="240" stroke="#D9738A" stroke-width="1" opacity="0.45"/>
+  <text x="200" y="254" font-family="Arial,sans-serif" font-size="8" fill="#A05070" text-anchor="middle">100% NATURAL</text>
+  <text x="200" y="266" font-family="Arial,sans-serif" font-size="8" fill="#A05070" text-anchor="middle">SKIN BRIGHTENING</text>
+  <!-- Rose illustration -->
+  <circle cx="200" cy="92" r="36" fill="#F4A7B9" opacity="0.18"/>
+  <ellipse cx="200" cy="78" rx="14" ry="10" fill="#D9738A" opacity="0.65"/>
+  <ellipse cx="214" cy="86" rx="14" ry="10" fill="#E8A0B0" opacity="0.7" transform="rotate(40 214 86)"/>
+  <ellipse cx="214" cy="100" rx="14" ry="10" fill="#E8A0B0" opacity="0.7" transform="rotate(-40 214 100)"/>
+  <ellipse cx="186" cy="86" rx="14" ry="10" fill="#E8A0B0" opacity="0.7" transform="rotate(-40 186 86)"/>
+  <ellipse cx="186" cy="100" rx="14" ry="10" fill="#E8A0B0" opacity="0.7" transform="rotate(40 186 100)"/>
+  <circle cx="200" cy="92" r="9" fill="#C45E77" opacity="0.82"/>
+  <!-- Brand -->
+  <text x="200" y="374" font-family="Georgia,serif" font-size="12" fill="#8B2A40" text-anchor="middle" opacity="0.7">Sri Velva Naturals</text>
+</svg>

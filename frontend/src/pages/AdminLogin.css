@@ -1,0 +1,250 @@
+/* ═══════════════════════════════════════════════════════════════
+   Admin Login Page — Sri Velva Naturals
+   Fully responsive: 320px → 375px → 425px → 768px → 1280px+
+   NO golden ring/box around logo — clean transparent logo only
+═══════════════════════════════════════════════════════════════ */
+
+/* ── Page: full-screen centred layout ── */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(74,124,47,0.35) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(184,134,11,0.15) 0%, transparent 50%),
+    linear-gradient(145deg, #0f1f08 0%, #1a3310 40%, #0d1a07 100%);
+}
+
+/* Subtle texture overlay */
+.login-page::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* ── Card ── */
+.login-card {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 2.75rem 2.75rem 2.25rem;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.08),
+    0 8px 24px rgba(0,0,0,0.2),
+    0 32px 80px rgba(0,0,0,0.35);
+  border-top: 3px solid #2D5016;
+}
+
+/* ── Brand block ── */
+.login-brand {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Logo — transparent PNG, no background */
+.login-logo {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 1rem;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  mix-blend-mode: normal;
+  image-rendering: high-quality;
+  padding: 0 !important;
+}
+
+.login-brand h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: #1a2e0f;
+  margin: 0 0 0.3rem;
+  letter-spacing: -0.01em;
+}
+
+.login-brand p {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+/* ── Error banner ── */
+.login-error {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  border-left: 3px solid #e53e3e;
+  color: #c53030;
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin-bottom: 1.35rem;
+  animation: loginShake 0.35s ease;
+}
+@keyframes loginShake {
+  0%, 100% { transform: translateX(0); }
+  25%       { transform: translateX(-6px); }
+  75%       { transform: translateX(6px); }
+}
+
+/* ── Field group ── */
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.1rem;
+}
+.login-field label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #374151;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ── Input wrapper ── */
+.login-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.login-icon {
+  position: absolute;
+  left: 1rem;
+  color: #9ca3af;
+  pointer-events: none;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+.login-input-wrap:focus-within .login-icon { color: #2D5016; }
+
+.login-input-wrap input {
+  width: 100%;
+  padding: 0.78rem 2.9rem 0.78rem 2.6rem;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 0.92rem;
+  font-family: 'Poppins', sans-serif;
+  color: #111827;
+  background: #f9fafb;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.login-input-wrap input:focus {
+  border-color: #2D5016;
+  box-shadow: 0 0 0 3px rgba(45,80,22,0.12);
+  background: #ffffff;
+}
+.login-input-wrap input:disabled { opacity: 0.6; cursor: not-allowed; }
+.login-input-wrap input::placeholder { color: #d1d5db; }
+
+/* Password toggle */
+.pw-toggle {
+  position: absolute;
+  right: 0.85rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.15s;
+}
+.pw-toggle:hover { color: #2D5016; background: rgba(45,80,22,0.06); }
+
+/* ── Submit button ── */
+.login-btn {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.85rem 1rem;
+  background: linear-gradient(135deg, #2D5016 0%, #3d6b1f 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(45,80,22,0.35);
+}
+.login-btn:hover:not(:disabled) {
+  opacity: 0.92;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(45,80,22,0.4);
+}
+.login-btn:active:not(:disabled) { transform: translateY(0); box-shadow: 0 3px 10px rgba(45,80,22,0.3); }
+.login-btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
+
+/* ── Back link ── */
+.login-back {
+  display: block;
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.login-back:hover { color: #2D5016; }
+
+/* ══════════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════════ */
+
+/* 768px — iPad portrait */
+@media (max-width: 768px) {
+  .login-page  { padding: 1.25rem; }
+  .login-card  { padding: 2.5rem 2.25rem 2rem; max-width: 400px; }
+  .login-logo  { height: 72px; }
+}
+
+/* 425px — large mobile */
+@media (max-width: 425px) {
+  .login-page  { padding: 1rem; align-items: flex-start; padding-top: 2rem; }
+  .login-card  { padding: 2.25rem 1.75rem 1.75rem; border-radius: 20px; }
+  .login-logo  { height: 64px; }
+  .login-brand h1 { font-size: 1.45rem; }
+}
+
+/* 375px — iPhone standard */
+@media (max-width: 375px) {
+  .login-page  { padding: 0.75rem; padding-top: 1.5rem; }
+  .login-card  { padding: 2rem 1.5rem 1.5rem; border-radius: 18px; }
+  .login-logo  { height: 58px; }
+  .login-brand h1 { font-size: 1.35rem; }
+  .login-brand p  { font-size: 0.78rem; }
+  .login-input-wrap input { font-size: 0.85rem; padding: 0.7rem 2.5rem 0.7rem 2.4rem; }
+  .login-btn   { padding: 0.78rem 1rem; font-size: 0.9rem; }
+}
+
+/* 320px — small phones */
+@media (max-width: 320px) {
+  .login-page  { padding: 0.5rem; padding-top: 1rem; }
+  .login-card  { padding: 1.75rem 1.25rem 1.25rem; border-radius: 16px; }
+  .login-logo  { height: 52px; }
+  .login-brand h1 { font-size: 1.2rem; }
+  .login-field label { font-size: 0.72rem; }
+  .login-input-wrap input { font-size: 0.82rem; }
+  .login-btn   { font-size: 0.85rem; padding: 0.72rem 1rem; }
+}

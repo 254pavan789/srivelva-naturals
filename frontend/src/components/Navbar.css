@@ -1,0 +1,376 @@
+/* ═══════════════════════════════════════════════════
+   Navbar — Sri Velva Naturals
+   LEFT: logo | CENTER: nav links | RIGHT: cart + shop
+   Fully responsive: 320px → 375px → 425px → 768px → 1024px → 1440px
+═══════════════════════════════════════════════════ */
+
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: 0;
+  transition:
+    background  0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow  0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    backdrop-filter 0.45s ease;
+  /* Fully transparent on top */
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+}
+
+/* ── Scrolled: frosted glass ── */
+.navbar.scrolled {
+  background: rgba(250, 246, 238, 0.93);
+  backdrop-filter: blur(18px) saturate(1.6);
+  -webkit-backdrop-filter: blur(18px) saturate(1.6);
+  box-shadow:
+    0 1px 0 rgba(230, 217, 194, 0.55),
+    0 4px 24px rgba(45, 80, 22, 0.07);
+}
+
+/* ── Inner row ── */
+.navbar-inner {
+  min-height: 115px !important;
+  height: 115px !important;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  overflow: visible;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── LEFT: Logo ── */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0 !important;
+  overflow: visible;
+  text-decoration: none;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+  outline: none !important;
+  /* Shift logo more to the right */
+  margin-left: 3rem;
+}
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    margin-left: 0 !important;
+  }
+}
+
+/* Logo image — 100×100px exact, full circular ring always visible */
+.navbar-logo-img,
+.navbar-logo img {
+  height: 100px !important;
+  width: 100px !important;
+  max-width: 100px !important;
+  min-width: 100px !important;
+  object-fit: contain;
+  object-position: center center;
+  display: block;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border-radius: 50% !important;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  user-select: none;
+  image-rendering: high-quality;
+  mix-blend-mode: normal;
+  padding: 0 !important;
+  flex-shrink: 0;
+}
+
+.navbar-logo:hover .navbar-logo-img,
+.navbar-logo:hover img {
+  opacity: 0.92;
+  transform: scale(1.05);
+}
+
+/* ── CENTER: Nav links ── */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 0;
+  margin: 0;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-link {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--forest);
+  padding: 0.42rem 0.95rem;
+  border-radius: 999px;
+  transition: color 0.22s ease, background 0.22s ease;
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 3px; left: 50%;
+  transform: translateX(-50%);
+  width: 0; height: 1.5px;
+  background: var(--gold);
+  border-radius: 2px;
+  transition: width 0.26s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after { width: 52%; }
+.nav-link:hover  { color: var(--fern); }
+.nav-link.active { color: var(--forest); font-weight: 600; }
+
+/* ── RIGHT: Actions ── */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.cart-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  color: var(--forest);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+.cart-btn:hover { background: var(--mint); transform: scale(1.05); }
+.cart-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; background: var(--mint); }
+
+.cart-badge {
+  position: absolute;
+  top: 0; right: 0;
+  width: 17px; height: 17px;
+  background: var(--gold);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  box-shadow: 0 1px 5px rgba(184,134,11,0.4);
+  animation: badgePop 0.28s ease;
+}
+@keyframes badgePop {
+  0%   { transform: scale(0); }
+  70%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* ── Hamburger ── */
+.menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 38px; height: 38px;
+  border-radius: var(--radius-md);
+  color: var(--forest);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: background 0.25s ease;
+}
+.menu-btn:hover { background: var(--mint); }
+.menu-btn:focus-visible { background: var(--mint); outline: 2px solid var(--gold); outline-offset: 2px; }
+
+/* ── Mobile drawer ── */
+.mobile-menu {
+  display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.38s cubic-bezier(0.25,0.46,0.45,0.94);
+  background: rgba(250,247,240,0.98);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid var(--linen);
+}
+.mobile-menu.open {
+  display: block;
+  max-height: 420px;
+}
+
+.mobile-menu-inner {
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem 1.25rem 1.25rem;
+  gap: 0.1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.mobile-link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--forest);
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid var(--linen);
+  transition: color 0.18s ease, padding-left 0.18s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.mobile-link:last-of-type { border-bottom: none; }
+.mobile-link:hover,
+.mobile-link.active { color: var(--gold); padding-left: 0.65rem; }
+
+.mobile-cart-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px; height: 18px;
+  background: var(--gold);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.62rem;
+  font-weight: 700;
+}
+
+.mobile-shop-btn {
+  margin-top: 0.85rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.hidden-mobile { display: inline-flex; }
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════ */
+
+/* ── 1280px desktop ── */
+@media (max-width: 1280px) {
+  .navbar-inner { padding: 0 1.75rem; }
+}
+
+/* ── 1024px iPad landscape ── */
+@media (max-width: 1024px) {
+  .navbar-inner    { min-height: 90px !important; height: 90px !important; padding: 0 1.5rem; }
+  .navbar-logo-img,
+  .navbar-logo img { height: 84px !important; }
+  .nav-link        { font-size: 0.88rem; padding: 0.38rem 0.75rem; }
+}
+
+/* ── 768px iPad portrait → hamburger menu ── */
+@media (max-width: 768px) {
+  .navbar-links  { display: none; }
+  .hidden-mobile { display: none !important; }
+  .menu-btn      { display: flex; }
+  .navbar-inner  {
+    min-height: 70px !important;
+    height: 70px !important;
+    padding: 0 1.25rem;
+    overflow: visible !important;
+  }
+  .navbar-logo     { overflow: visible !important; }
+  .navbar-logo-img,
+  .navbar-logo img { height: 64px !important; max-height: 64px !important; }
+}
+
+/* ── 425px large mobile ── */
+@media (max-width: 425px) {
+  .navbar-inner  {
+    min-height: 64px !important;
+    height: 64px !important;
+    padding: 0 1rem;
+    overflow: visible !important;
+  }
+  .navbar-logo-img,
+  .navbar-logo img { height: 54px !important; max-height: 54px !important; }
+  .mobile-menu-inner { padding: 0.5rem 1rem 1.1rem; }
+}
+
+/* ── 375px iPhone standard ── */
+@media (max-width: 375px) {
+  .navbar-inner {
+    min-height: 60px !important;
+    height: 60px !important;
+    padding: 0 0.875rem;
+  }
+  .navbar-logo-img,
+  .navbar-logo img { height: 50px !important; max-height: 50px !important; }
+  .cart-btn  { width: 36px; height: 36px; }
+  .menu-btn  { width: 34px; height: 34px; }
+}
+
+/* ── 320px small phones ── */
+@media (max-width: 320px) {
+  .navbar-inner {
+    min-height: 56px !important;
+    height: 56px !important;
+    padding: 0 0.75rem;
+  }
+  .navbar-logo-img,
+  .navbar-logo img { height: 44px !important; max-height: 44px !important; }
+  .cart-btn  { width: 32px; height: 32px; }
+  .menu-btn  { width: 32px; height: 32px; }
+  .cart-badge { width: 14px; height: 14px; font-size: 0.5rem; }
+}
+
+/* ── About page hero — same transparent style as home page ── */
+.about-page-nav {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+/* Keep nav links readable over dark green bg with subtle text shadow */
+.about-page-nav .nav-link {
+  color: rgba(255,255,255,0.92) !important;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.35);
+}
+.about-page-nav .nav-link::after      { background: var(--honey) !important; }
+.about-page-nav .nav-link:hover       { color: var(--honey) !important; }
+.about-page-nav .nav-link.active      { color: white !important; font-weight: 700 !important; }
+.about-page-nav .cart-btn             { color: rgba(255,255,255,0.9) !important; text-shadow: 0 1px 4px rgba(0,0,0,0.3); }
+.about-page-nav .cart-btn:hover       { background: rgba(255,255,255,0.14) !important; }
+.about-page-nav.scrolled {
+  background: rgba(250, 246, 238, 0.93) !important;
+  backdrop-filter: blur(18px) saturate(1.6) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(1.6) !important;
+  box-shadow: 0 1px 0 rgba(230,217,194,0.55), 0 4px 24px rgba(45,80,22,0.07) !important;
+}
+.about-page-nav.scrolled .nav-link    { color: var(--forest) !important; text-shadow: none !important; }
+.about-page-nav.scrolled .cart-btn   { color: var(--forest) !important; text-shadow: none !important; }
+.about-page-nav.scrolled .nav-link::after { background: var(--gold) !important; }
+
+/* ── About page: half-transparent frosted glass (not solid cream) ── */
+.navbar.about-frosted {
+  background: rgba(255, 253, 248, 0.45) !important;
+  backdrop-filter: blur(14px) saturate(1.4) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(1.4) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.25), 0 4px 24px rgba(0,0,0,0.08) !important;
+}
+/* On scroll — go fully solid cream */
+.navbar.about-frosted.scrolled {
+  background: rgba(250, 246, 238, 0.93) !important;
+  backdrop-filter: blur(18px) saturate(1.6) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(1.6) !important;
+  box-shadow: 0 1px 0 rgba(230,217,194,0.55), 0 4px 24px rgba(45,80,22,0.07) !important;
+}

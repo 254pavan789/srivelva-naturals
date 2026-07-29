@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#F5E6C8"/>
+      <stop offset="100%" stop-color="#C8965A"/>
+    </radialGradient>
+  </defs>
+  <circle cx="50" cy="50" r="48" fill="url(#bg)" stroke="#A0733A" stroke-width="2"/>
+  <!-- Leaf / drop icon representing oil -->
+  <path d="M50 22 C50 22 30 42 30 58 C30 69 39 78 50 78 C61 78 70 69 70 58 C70 42 50 22 50 22 Z" 
+        fill="#5C7A4E" opacity="0.85"/>
+  <path d="M50 38 C50 38 40 52 40 60 C40 65.5 44.5 70 50 70 C55.5 70 60 65.5 60 60 C60 52 50 38 50 38 Z" 
+        fill="#F5E6C8" opacity="0.6"/>
+  <!-- S letter for Sri -->
+  <text x="50" y="56" font-family="Georgia,serif" font-size="18" font-weight="bold" 
+        fill="#FFFAF0" text-anchor="middle" dominant-baseline="middle">S</text>
+</svg>

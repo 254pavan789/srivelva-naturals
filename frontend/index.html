@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sri Velva Naturals - Pure, Natural, Cold Pressed Oils. Premium skin care and hair care products from Tamil Nadu." />
+    <meta name="theme-color" content="#2D5016" />
+
+    <!--
+      ╔══════════════════════════════════════════════════════════════╗
+      ║  NO CSP META TAG HERE — THIS IS INTENTIONAL                 ║
+      ╠══════════════════════════════════════════════════════════════╣
+      ║                                                              ║
+      ║  CSP is applied in exactly ONE place per environment:        ║
+      ║                                                              ║
+      ║  DEVELOPMENT  →  HTTP header via vite.config.js             ║
+      ║                   server.headers['Content-Security-Policy']  ║
+      ║                   (includes unsafe-eval for Vite HMR)        ║
+      ║                                                              ║
+      ║  PRODUCTION   →  HTTP header on your hosting platform:       ║
+      ║                   • Netlify  →  public/_headers              ║
+      ║                   • Vercel   →  vercel.json                  ║
+      ║                   • Nginx    →  nginx.conf add_header        ║
+      ║                   (NO unsafe-eval — secure)                  ║
+      ║                                                              ║
+      ║  WHY NOT A META TAG?                                         ║
+      ║  When a browser receives CSP from BOTH an HTTP header AND a  ║
+      ║  <meta> tag, it enforces BOTH policies simultaneously at     ║
+      ║  their intersection — i.e. the most restrictive of the two.  ║
+      ║  Even if the header allows 'unsafe-eval', the meta tag can   ║
+      ║  block it. Chromium also has a whitespace-parsing quirk with ║
+      ║  multiline content="" attributes that causes 'unsafe-eval'   ║
+      ║  to be silently dropped.                                     ║
+      ║                                                              ║
+      ║  One policy, one place = no conflicts, no surprises.         ║
+      ╚══════════════════════════════════════════════════════════════╝
+    -->
+
+    <title>Sri Velva Naturals | Pure · Natural · Cold Pressed Oils</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

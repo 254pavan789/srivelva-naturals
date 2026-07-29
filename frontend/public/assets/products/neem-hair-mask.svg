@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#F4FBF4"/>
+      <stop offset="100%" stop-color="#C8E8C0"/>
+    </radialGradient>
+    <linearGradient id="tubeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2D7A3A"/>
+      <stop offset="50%" stop-color="#44A850"/>
+      <stop offset="100%" stop-color="#256030"/>
+    </linearGradient>
+  </defs>
+  <circle cx="150" cy="150" r="148" fill="url(#bg)" stroke="#44A850" stroke-width="2"/>
+  <!-- Wide squat jar for mask -->
+  <rect x="88" y="155" width="124" height="88" rx="14" fill="url(#tubeGrad)" opacity="0.9"/>
+  <!-- Jar lid -->
+  <ellipse cx="150" cy="155" rx="62" ry="17" fill="#1C5C26" opacity="0.95"/>
+  <!-- Inner mask color (creamy green) -->
+  <rect x="94" y="172" width="112" height="60" rx="8" fill="#C8E8A0" opacity="0.6"/>
+  <!-- Neem leaves scattered -->
+  <path d="M80,130 Q85,115 95,122 Q90,132 80,130" fill="#56A840" opacity="0.85"/>
+  <path d="M80,130 Q75,118 82,110 Q88,120 80,130" fill="#44A030" opacity="0.8"/>
+  <path d="M88,122 Q93,107 103,115 Q98,126 88,122" fill="#56A840" opacity="0.75"/>
+  <path d="M220,135 Q215,120 205,127 Q210,137 220,135" fill="#56A840" opacity="0.85"/>
+  <path d="M220,135 Q225,123 218,115 Q212,125 220,135" fill="#44A030" opacity="0.8"/>
+  <path d="M212,127 Q207,112 197,120 Q202,131 212,127" fill="#56A840" opacity="0.75"/>
+  <!-- Label on lid top -->
+  <text x="150" y="151" font-family="Georgia,serif" font-size="9" fill="#D0F0A0" text-anchor="middle" font-weight="bold">NEEM</text>
+  <text x="150" y="162" font-family="Georgia,serif" font-size="7" fill="#B0E080" text-anchor="middle">HAIR MASK</text>
+  <!-- Front label -->
+  <rect x="100" y="182" width="100" height="42" rx="5" fill="white" opacity="0.35"/>
+  <text x="150" y="196" font-family="Georgia,serif" font-size="6.5" fill="#1C5C26" text-anchor="middle">Neem · Fenugreek · Coconut</text>
+  <text x="150" y="207" font-family="Georgia,serif" font-size="6.5" fill="#1C5C26" text-anchor="middle">Deep Conditioning</text>
+  <text x="150" y="218" font-family="Georgia,serif" font-size="6" fill="#3A8040" text-anchor="middle">Anti-dandruff · Shiny Hair</text>
+  <text x="150" y="258" font-family="Georgia,serif" font-size="13" fill="#2E7040" text-anchor="middle">Sri Velva Naturals</text>
+</svg>

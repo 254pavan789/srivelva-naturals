@@ -1,0 +1,99 @@
+/* ══════════════════════════════════════════
+   Loading Skeleton — Sri Velva Naturals
+   Mirrors ProductCard layout precisely
+   ══════════════════════════════════════════ */
+
+/* ── Shimmer keyframe ── */
+@keyframes shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position:  600px 0; }
+}
+
+/* The shimmer gradient — warm cream tones matching brand palette */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    #f0ebe0 25%,
+    #faf6ee 50%,
+    #f0ebe0 75%
+  );
+  background-size: 600px 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+  border-radius: var(--radius-md);
+}
+
+/* ── Skeleton grid — same columns as .products-grid ── */
+.skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 1100px) { .skeleton-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px)  { .skeleton-grid { grid-template-columns: 1fr; } }
+
+/* ── Skeleton card shell ── */
+.skeleton-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  /* Same layered shadow as real card so the layout shift is invisible */
+  box-shadow:
+    0 1px 2px  rgba(45,80,22,0.04),
+    0 4px 16px rgba(45,80,22,0.07);
+  border: 1px solid rgba(45,80,22,0.05);
+}
+
+/* ── Image placeholder ── */
+.sk-image {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  border-radius: 0;       /* flush with card edges */
+}
+
+/* ── Body placeholder ── */
+.sk-body {
+  padding: 1.3rem 1.3rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* Category pill */
+.sk-pill {
+  width: 64px;
+  height: 18px;
+  border-radius: 999px;
+}
+
+/* Title line */
+.sk-line { height: 13px; }
+.sk-line--title { width: 80%; }
+.sk-line--sub   { width: 100%; }
+.sk-line--sub2  { width: 65%; }
+
+/* Footer row */
+.sk-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.65rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(45,80,22,0.06);
+}
+
+.sk-price {
+  width: 64px;
+  height: 22px;
+  border-radius: var(--radius-sm);
+}
+
+.sk-btn {
+  width: 110px;
+  height: 34px;
+  border-radius: 999px;
+}

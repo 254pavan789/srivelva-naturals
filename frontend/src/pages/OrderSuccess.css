@@ -1,0 +1,116 @@
+.success-page {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #eef5e8, var(--sand));
+  padding: 3rem 1.5rem 3rem;
+  padding-top: calc(115px + 2rem); /* clear navbar */
+}
+.success-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 3rem 2.5rem;
+  max-width: 520px; width: 100%;
+  text-align: center;
+  box-shadow: var(--shadow-xl);
+}
+.success-icon {
+  width: 96px; height: 96px;
+  border-radius: 50%;
+  background: var(--mint);
+  color: var(--forest);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.5rem;
+  animation: successPop 0.5s ease;
+}
+@keyframes successPop {
+  0%   { transform: scale(0); }
+  70%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+.success-card h1 {
+  font-family: var(--font-display);
+  font-size: 2.5rem; color: var(--forest);
+  margin-bottom: 0.5rem;
+}
+.success-sub { color: var(--bark); margin-bottom: 2rem; }
+.success-details {
+  background: var(--mist);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+.sd-row {
+  display: flex; justify-content: space-between;
+  font-size: 0.875rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--linen);
+}
+.sd-row:last-child { border-bottom: none; }
+.sd-row span { color: var(--bark); }
+.sd-row strong { color: var(--forest); }
+.success-note {
+  font-size: 0.85rem; color: var(--bark);
+  margin-bottom: 1.75rem; line-height: 1.6;
+}
+.success-actions {
+  display: flex; flex-direction: column; gap: 0.75rem;
+}
+.success-actions .btn { justify-content: center; }
+
+@media (max-width: 1024px) { .success-page { padding-top: calc(115px + 2rem); } }
+@media (max-width: 768px)  { .success-page { padding-top: calc(105px + 1.5rem); } }
+@media (max-width: 480px)  { .success-page { padding-top: calc(115px + 1.25rem); } }
+
+/* ── Cancel order section (below main actions) ── */
+.cancel-order-section {
+  margin-top: 1.6rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid #f0ece4;
+  width: 100%;
+  text-align: center;
+}
+
+.cancel-order-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: 1.5px solid #e53935;
+  color: #c62828;
+  padding: 0.55rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.cancel-order-btn:hover {
+  background: #fff0f0;
+  border-color: #c62828;
+  transform: translateY(-1px);
+}
+
+.cancel-note {
+  font-size: 0.75rem;
+  color: #888;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Status badge colours */
+.status-badge {
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+}
+.status-pending    { background:#fff8e1; color:#e65100; }
+.status-confirmed  { background:#e8f5e9; color:#2e7d32; }
+.status-processing { background:#e3f2fd; color:#1565c0; }
+.status-shipped    { background:#f3e5f5; color:#6a1b9a; }
+.status-delivered  { background:#e8f5e9; color:#1b5e20; font-weight:700; }
+.status-cancelled  { background:#ffebee; color:#b71c1c; }
+
+/* Cancelled state — icon red */
+.success-icon.cancelled { background: #ffebee; color: #c62828; }

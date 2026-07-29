@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <radialGradient id="bg4" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#F2FBF0"/>
+      <stop offset="100%" stop-color="#D5EDCF"/>
+    </radialGradient>
+    <radialGradient id="jar4" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#F6FEF4"/>
+      <stop offset="100%" stop-color="#C8E8C0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" rx="24" fill="url(#bg4)"/>
+  <ellipse cx="52" cy="65" rx="28" ry="14" fill="#3A8A30" opacity="0.15" transform="rotate(-20 52 65)"/>
+  <ellipse cx="348" cy="335" rx="28" ry="14" fill="#3A8A30" opacity="0.15" transform="rotate(-20 348 335)"/>
+  <!-- Jar body -->
+  <rect x="118" y="160" width="164" height="154" rx="18" fill="url(#jar4)" stroke="#3A8A30" stroke-width="2.5"/>
+  <!-- Powder -->
+  <ellipse cx="200" cy="298" rx="70" ry="16" fill="#5AAA48" opacity="0.75"/>
+  <rect x="130" y="255" width="140" height="43" rx="0" fill="#5AAA48" opacity="0.25"/>
+  <!-- Lid -->
+  <rect x="108" y="132" width="184" height="34" rx="12" fill="#3A8A30"/>
+  <rect x="128" y="124" width="144" height="14" rx="7" fill="#2A6A22"/>
+  <!-- Label -->
+  <rect x="133" y="175" width="134" height="96" rx="8" fill="white" opacity="0.84"/>
+  <rect x="133" y="175" width="134" height="22" rx="8" fill="#3A8A30"/>
+  <text x="200" y="191" font-family="Arial,sans-serif" font-size="8.5" fill="white" text-anchor="middle" font-weight="bold">LEAF POWDER</text>
+  <text x="200" y="216" font-family="Georgia,serif" font-size="13" fill="#1A5A18" text-anchor="middle" font-weight="bold">HIBISCUS</text>
+  <text x="200" y="232" font-family="Georgia,serif" font-size="11" fill="#1A5A18" text-anchor="middle" font-weight="bold">LEAF POWDER</text>
+  <line x1="146" y1="240" x2="254" y2="240" stroke="#3A8A30" stroke-width="1" opacity="0.4"/>
+  <text x="200" y="254" font-family="Arial,sans-serif" font-size="8" fill="#2A6A22" text-anchor="middle">ANTI-DANDRUFF</text>
+  <text x="200" y="266" font-family="Arial,sans-serif" font-size="8" fill="#2A6A22" text-anchor="middle">NATURAL CONDITIONER</text>
+  <!-- Hibiscus leaf icon -->
+  <circle cx="200" cy="92" r="36" fill="#5AAA48" opacity="0.12"/>
+  <path d="M200,60 Q222,72 220,95 Q210,108 196,105 Q180,98 182,76 Q190,62 200,60Z" fill="#3A8A30" opacity="0.6"/>
+  <line x1="200" y1="62" x2="200" y2="106" stroke="#1A5A18" stroke-width="2" opacity="0.6"/>
+  <line x1="200" y1="74" x2="190" y2="82" stroke="#1A5A18" stroke-width="1.2" opacity="0.5"/>
+  <line x1="200" y1="82" x2="192" y2="92" stroke="#1A5A18" stroke-width="1.2" opacity="0.5"/>
+  <line x1="200" y1="74" x2="210" y2="82" stroke="#1A5A18" stroke-width="1.2" opacity="0.5"/>
+  <line x1="200" y1="82" x2="210" y2="92" stroke="#1A5A18" stroke-width="1.2" opacity="0.5"/>
+  <!-- Brand -->
+  <text x="200" y="374" font-family="Georgia,serif" font-size="12" fill="#1A5A18" text-anchor="middle" opacity="0.7">Sri Velva Naturals</text>
+</svg>

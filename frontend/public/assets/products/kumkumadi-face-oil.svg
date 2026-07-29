@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FDF5F8"/>
+      <stop offset="100%" stop-color="#F0DCEA"/>
+    </radialGradient>
+    <linearGradient id="bottleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9B3060"/>
+      <stop offset="45%" stop-color="#C84080"/>
+      <stop offset="100%" stop-color="#8A2050"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5D060"/>
+      <stop offset="100%" stop-color="#C8A020"/>
+    </linearGradient>
+  </defs>
+  <circle cx="150" cy="150" r="148" fill="url(#bg)" stroke="#C070A0" stroke-width="2"/>
+  <!-- Elegant dropper bottle -->
+  <rect x="122" y="130" width="56" height="105" rx="12" fill="url(#bottleGrad)" opacity="0.92"/>
+  <!-- Neck -->
+  <rect x="136" y="105" width="28" height="30" rx="6" fill="url(#bottleGrad)" opacity="0.92"/>
+  <!-- Gold cap -->
+  <rect x="132" y="90" width="36" height="18" rx="7" fill="url(#goldGrad)"/>
+  <!-- Dropper ball -->
+  <circle cx="150" cy="82" r="9" fill="url(#goldGrad)"/>
+  <!-- Bottle shine -->
+  <rect x="130" y="140" width="8" height="60" rx="4" fill="white" opacity="0.25"/>
+  <!-- Gold label area -->
+  <rect x="126" y="155" width="48" height="55" rx="5" fill="url(#goldGrad)" opacity="0.15"/>
+  <rect x="128" y="157" width="44" height="51" rx="4" fill="none" stroke="url(#goldGrad)" stroke-width="1"/>
+  <text x="150" y="172" font-family="Georgia,serif" font-size="6" fill="#FFE080" text-anchor="middle" font-weight="bold">KUMKUMADI</text>
+  <text x="150" y="182" font-family="Georgia,serif" font-size="6" fill="#FFE080" text-anchor="middle">FACE OIL</text>
+  <text x="150" y="193" font-family="Georgia,serif" font-size="5" fill="#FFCCE0" text-anchor="middle">Ayurvedic • 16 Oils</text>
+  <text x="150" y="202" font-family="Georgia,serif" font-size="5" fill="#FFCCE0" text-anchor="middle">Saffron · Sandalwood</text>
+  <!-- Saffron strands -->
+  <path d="M90,170 Q95,155 100,165" stroke="#F0A030" stroke-width="2" fill="none" opacity="0.8"/>
+  <circle cx="100" cy="165" r="3" fill="#E08020" opacity="0.8"/>
+  <path d="M85,185 Q92,170 96,180" stroke="#F0A030" stroke-width="2" fill="none" opacity="0.7"/>
+  <circle cx="96" cy="180" r="3" fill="#E08020" opacity="0.7"/>
+  <!-- Lotus petals -->
+  <path d="M210,175 Q220,160 230,175 Q220,185 210,175" fill="#FFB0D0" opacity="0.7"/>
+  <path d="M205,188 Q220,178 225,195 Q215,197 205,188" fill="#FF90C0" opacity="0.6"/>
+  <path d="M215,198 Q228,192 228,208 Q218,208 215,198" fill="#FFB0D0" opacity="0.6"/>
+  <text x="150" y="258" font-family="Georgia,serif" font-size="13" fill="#B05080" text-anchor="middle">Sri Velva Naturals</text>
+</svg>

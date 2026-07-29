@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#F2FBF2"/>
+      <stop offset="100%" stop-color="#D0EBD0"/>
+    </radialGradient>
+    <linearGradient id="bottleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A6B30"/>
+      <stop offset="45%" stop-color="#2A9040"/>
+      <stop offset="100%" stop-color="#155A28"/>
+    </linearGradient>
+  </defs>
+  <circle cx="150" cy="150" r="148" fill="url(#bg)" stroke="#3A8040" stroke-width="2"/>
+  <!-- Round bottle -->
+  <ellipse cx="150" cy="195" rx="55" ry="65" fill="url(#bottleGrad)" opacity="0.92"/>
+  <!-- Neck -->
+  <rect x="136" y="108" width="28" height="38" rx="5" fill="url(#bottleGrad)" opacity="0.92"/>
+  <!-- Cap -->
+  <rect x="132" y="94" width="36" height="17" rx="7" fill="#0D4A1E"/>
+  <!-- Shine -->
+  <ellipse cx="133" cy="180" rx="7" ry="40" fill="white" opacity="0.18"/>
+  <!-- Herbs/leaves around bottle -->
+  <path d="M85,160 Q70,140 80,120 Q95,138 85,160" fill="#4CAF50" opacity="0.8"/>
+  <path d="M78,175 Q60,160 65,140 Q82,155 78,175" fill="#388E3C" opacity="0.7"/>
+  <path d="M215,155 Q230,135 222,115 Q208,132 215,155" fill="#4CAF50" opacity="0.8"/>
+  <path d="M222,170 Q240,155 235,135 Q218,150 222,170" fill="#388E3C" opacity="0.7"/>
+  <!-- Hibiscus flower -->
+  <circle cx="95" cy="215" r="4" fill="#F44336" opacity="0.8"/>
+  <path d="M95,215 Q85,205 88,195 Q97,202 95,215" fill="#E91E63" opacity="0.7"/>
+  <path d="M95,215 Q105,205 102,195 Q93,202 95,215" fill="#E91E63" opacity="0.7"/>
+  <!-- Label -->
+  <ellipse cx="150" cy="195" rx="40" ry="48" fill="white" opacity="0.85"/>
+  <text x="150" y="178" font-family="Georgia,serif" font-size="7" fill="#1A5C28" text-anchor="middle" font-weight="bold">BRAHMI</text>
+  <text x="150" y="189" font-family="Georgia,serif" font-size="7" fill="#1A5C28" text-anchor="middle">HAIR OIL</text>
+  <text x="150" y="200" font-family="Georgia,serif" font-size="5.5" fill="#3A8040" text-anchor="middle">Brahmi · Amla · Bhringraj</text>
+  <text x="150" y="210" font-family="Georgia,serif" font-size="5.5" fill="#3A8040" text-anchor="middle">Neem · Hibiscus</text>
+  <text x="150" y="221" font-family="Georgia,serif" font-size="5.5" fill="#5A9060" text-anchor="middle">Coconut Oil Base</text>
+  <text x="150" y="258" font-family="Georgia,serif" font-size="13" fill="#2E7040" text-anchor="middle">Sri Velva Naturals</text>
+</svg>

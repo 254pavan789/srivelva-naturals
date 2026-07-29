@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFF8EC"/>
+      <stop offset="100%" stop-color="#F0DDB8"/>
+    </radialGradient>
+    <linearGradient id="bottleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4921A"/>
+      <stop offset="45%" stop-color="#F0B030"/>
+      <stop offset="100%" stop-color="#C07A10"/>
+    </linearGradient>
+  </defs>
+  <circle cx="150" cy="150" r="148" fill="url(#bg)" stroke="#CCA030" stroke-width="2"/>
+  <!-- Tall oil bottle -->
+  <path d="M125,240 L120,165 Q118,148 128,138 L128,115 Q128,105 138,103 L162,103 Q172,105 172,115 L172,138 Q182,148 180,165 L175,240 Z" fill="url(#bottleGrad)" opacity="0.9"/>
+  <!-- Bottle cap -->
+  <rect x="135" y="90" width="30" height="16" rx="5" fill="#8B5A00"/>
+  <!-- Shine lines -->
+  <path d="M129,145 L127,230" stroke="white" stroke-width="5" opacity="0.2" stroke-linecap="round"/>
+  <!-- Label -->
+  <rect x="124" y="168" width="52" height="52" rx="4" fill="white" opacity="0.88"/>
+  <text x="150" y="183" font-family="Georgia,serif" font-size="6.5" fill="#8B5A00" text-anchor="middle" font-weight="bold">COLD PRESSED</text>
+  <text x="150" y="193" font-family="Georgia,serif" font-size="6.5" fill="#8B5A00" text-anchor="middle">GROUNDNUT</text>
+  <text x="150" y="203" font-family="Georgia,serif" font-size="6.5" fill="#8B5A00" text-anchor="middle">OIL</text>
+  <text x="150" y="213" font-family="Georgia,serif" font-size="5.5" fill="#CCA030" text-anchor="middle">Farm Fresh</text>
+  <!-- Peanuts -->
+  <ellipse cx="95" cy="200" rx="18" ry="10" fill="#C8A060" opacity="0.85" transform="rotate(-20,95,200)"/>
+  <path d="M85,198 Q95,192 105,198" stroke="#A07840" stroke-width="1.5" fill="none"/>
+  <ellipse cx="210" cy="210" rx="16" ry="9" fill="#C8A060" opacity="0.8" transform="rotate(15,210,210)"/>
+  <path d="M201,208 Q210,202 219,208" stroke="#A07840" stroke-width="1.5" fill="none"/>
+  <text x="150" y="258" font-family="Georgia,serif" font-size="13" fill="#A07830" text-anchor="middle">Sri Velva Naturals</text>
+</svg>
